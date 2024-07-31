@@ -2,6 +2,10 @@
 
 > This App is an app for displaying movies, search on movie and watch its trailer.
 
+## 🚀 Live Demo
+
+The live demo [link](https://cineflicksapp.netlify.app/) deployed on Netlify.
+
 ## Description
 
 - Initialized the app using `vite` with `TypeScript` and `Tailwind`.
@@ -75,6 +79,7 @@
 
 - Less mature as a testing framework compared to `jest`, which has a long history and extensive ecosystem.
 - Requires additional setup and configuration for comprehensive testing solutions.
+
 
 ## Possible future improvements
 
