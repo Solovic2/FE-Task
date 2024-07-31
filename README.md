@@ -14,7 +14,7 @@
 - Added `unit tests` using `React Testing Library` for components.
 - Deploy on `netlify`.
 
-## Reasoning behind your technical decisions
+## Reason behind technical decisions
 
 - Created a shared component for search across pages to improve user experience.
 - Utilized Search Params for the search query and page number, making it easier for users to return to the same page with the search results when reloading the page.
@@ -24,3 +24,60 @@
 - Integrated the Movie Trailer Library to fetch and display YouTube trailers for movies.
 - Designed a Modal that pops up when the user clicks the play button on the Details Page, allowing them to watch the trailer and enhancing the user experience.
 - Added lazy loading to images to enhance user experience and app performance.
+
+### Trade-offs and Choices in the Movie App
+
+#### 1. Using `useQuery` over `useEffect`
+
+**Advantages**:
+
+- Automatically handles state management (loading, error, caching, etc.).
+- Simplifies data fetching logic with built-in support for retries and background refreshing.
+- Better integration with server state and easy synchronization.
+
+**Disadvantages**:
+
+- Adds an extra dependency (`TanStack React Query`) to the project.
+- Requires learning a new library if you're not already familiar with it.
+
+#### 2. Using a lazy loading library over the `lazyload` attribute
+
+**Advantages**:
+
+- Allows for additional features like image blur and beautiful shapes while loading, enhancing the user experience.
+- Provides more customization and flexibility.
+
+**Disadvantages**:
+
+- Increases the bundle size due to the additional library.
+
+#### 3. Using search on Enter instead of on type
+
+**Advantages**:
+
+- Reduces the number of backend requests, which can improve performance and reduce server load.
+- Provides a more controlled and deliberate search experience for the user.
+
+**Disadvantages**:
+
+- Delays immediate feedback to the user, which might affect the user experience.
+- Users might expect real-time search results and could find the Enter requirement less intuitive.
+
+#### 4. Using `vite` instead of `jest` for testing
+
+**Advantages**:
+
+- Faster build times and hot module replacement (HMR) for a more efficient development experience.
+- More modern and actively maintained, with growing community support.
+- Built-in support for modern JavaScript features and libraries.
+
+**Disadvantages**:
+
+- Less mature as a testing framework compared to `jest`, which has a long history and extensive ecosystem.
+- Requires additional setup and configuration for comprehensive testing solutions.
+
+## Possible future improvements
+
+- Plan to add a TV Page and a Bookmark Page with search functionality.
+- Plan to add a Home Page showcasing all movies and TV shows, including trending and recent titles.
+- Plan to implement debounce on search and enable search functionality on type.
