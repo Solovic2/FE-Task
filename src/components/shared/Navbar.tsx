@@ -1,4 +1,5 @@
-import { MdLocalMovies, MdMovieCreation } from "react-icons/md";
+import { MdMovieCreation } from "react-icons/md";
+import { PiSquaresFourFill } from "react-icons/pi";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
                 isActive ? "text-white" : "hover:text-primaryRed"
               }
             >
-              <MdLocalMovies className="text-xl md:text-2xl" />
+              <PiSquaresFourFill className="text-xl md:text-2xl" />
             </NavLink>
           </li>
         </ul>
