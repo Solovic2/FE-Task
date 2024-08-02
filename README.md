@@ -67,18 +67,19 @@ The live demo [link](https://cineflicksapp.netlify.app/) deployed on Netlify.
 - Delays immediate feedback to the user, which might affect the user experience.
 - Users might expect real-time search results and could find the Enter requirement less intuitive.
 
-#### 4. Using `vite` instead of `jest` for testing
+#### 4. Using `vitest` instead of `jest` for testing
 
 **Advantages**:
 
-- Faster build times and hot module replacement (HMR) for a more efficient development experience.
-- More modern and actively maintained, with growing community support.
-- Built-in support for modern JavaScript features and libraries.
+- Faster test execution and support for Hot Module Replacement (HMR).
+- Seamless integration with Vite.
+- Supports modern JavaScript and TypeScript with minimal configuration.
+- Simpler setup and configuration. 
 
 **Disadvantages**:
 
 - Less mature as a testing framework compared to `jest`, which has a long history and extensive ecosystem.
-- Requires additional setup and configuration for comprehensive testing solutions.
+- Smaller community and fewer resources.
 
 
 ## Possible future improvements
